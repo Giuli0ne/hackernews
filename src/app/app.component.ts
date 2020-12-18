@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component,NgModule } from '@angular/core';
+import {ARTICLES} from './mockarticles'
+
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'hackernews';
+  title = 'Hackernews';
+  articles = ARTICLES;
 }
