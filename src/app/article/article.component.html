@@ -1,2 +1,12 @@
-<p>{{article.title}}</p>
-<a href={{article.url}}>Link</a>
+<a class="reference" href={{article.url}}>
+    <div class="container">
+        <div id="grid">
+            <div class="score"> {{article.score}}p </div>
+            <div>{{article.title}}</div>
+        </div>
+        <div id="subgrid">
+            <div> {{article.time * 1000 | date:'dd-MM-yy HH:mm'}}</div>
+            <div>{{article.url}}</div>
+        </div>
+    </div>
+</a>

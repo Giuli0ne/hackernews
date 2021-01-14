@@ -1,5 +1,7 @@
-import { Component,NgModule } from '@angular/core';
-import {ARTICLES} from './mockarticles'
+import { Component,NgModule, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Article } from './article';
+import { ArticleService } from './article.service';
 
 
 @Component({
@@ -8,6 +10,18 @@ import {ARTICLES} from './mockarticles'
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Hackernews';
-  articles = ARTICLES;
+  title = 'Hackernews: a new hope';
+  articleIds : number[];
+  articles : Article[] = [];
+
+  constructor(private articleService: ArticleService){
+    this.articleService.getArticleIds().subscribe(a => this.articleService.getItems(a).subscribe(b => this.articles.push(b)));
+    //console.log(this.articleIds)
+    //this.articleService.getAllArticles(this.articleIds).subscribe(a => this.articles = a);
+
+  }
+  ngOnInit() {
+    
+  }
+
 }

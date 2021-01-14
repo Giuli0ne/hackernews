@@ -1,1 +1,25 @@
-/* You can add global styles to this file, and also import other style files */
+
+
+html{
+    background-color:#b9cbe2;
+    font-family: 'Titillium Web', sans-serif;
+  }
+
+body {
+  padding: 1em 25%;
+}
+
+a{
+    padding: 0 0 0 5px;
+    text-decoration: none;
+    color: #043f81;
+}
+  a:hover,
+  a:focus {
+    color: #0077ff;
+  }
+
+  a:visited{
+    color: #6e7f92;
+  }
+  
